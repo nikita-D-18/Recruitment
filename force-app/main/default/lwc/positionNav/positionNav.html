@@ -1,0 +1,15 @@
+<template>
+    <lightning-card>
+        <lightning-card>
+            <lightning-button label="HOME" onclick={navigateToNewAccountPage}></lightning-button>
+            <lightning-button label="POSITION" onclick={navigateToViewAccountPage}></lightning-button>
+            <lightning-button label="CANDIDATE" onclick={navigateToViewCandidatePage}></lightning-button>
+            <lightning-button label="JOB APPLICATION" onclick={navigateToViewJobPage}></lightning-button>
+            
+        </lightning-card>
+        <lightning-card title="Navigate To Views">
+            <lightning-button label="Account Recent list View" onclick={navigateToAccountListView}></lightning-button>
+            <lightning-button label="Account Related List" onclick={navigateToContactRelatedList}></lightning-button>
+        </lightning-card>
+    </lightning-card>
+</template>

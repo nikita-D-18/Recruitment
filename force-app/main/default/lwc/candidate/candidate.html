@@ -1,0 +1,44 @@
+<template>
+    <lightning-card title="Candiadte Record">
+        <div class="slds-m-around_medium">
+
+            <lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small" label="Search"
+                value={searchKey}></lightning-input>
+            <lightning-datatable key-field="Id" data={data} columns={columns} sorted-by={sortedBy}
+                sorted-direction={sortedDirection} onsort={sortColumns}>
+            </lightning-datatable>
+            </br>
+            <lightning-layout horizontal-align="space">
+                <lightning-layout-item flexibility="auto">
+                    <lightning-button label="Previous" icon-name="utility:chevronleft" onclick={previousHandler}>
+                    </lightning-button>
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="auto">
+                    Page {page} of {totalPage}
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="auto">
+                    <lightning-button label="Next" icon-name="utility:chevronright" icon-position="right"
+                        onclick={nextHandler}></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+        <h1 class="slds-text-heading_small" >Insert New Candidate Record</h1>   
+
+
+    <div>
+        <lightning-input type="text" name="input1" label="Enter First Name" ></lightning-input>
+        <lightning-input type="text" name="input1" label="Enter Last Name" ></lightning-input>
+        <lightning-input type="text" name="input1" label="Education" ></lightning-input>
+        <lightning-input type="text" name="input1" label="Country" ></lightning-input>
+        <lightning-input type="text" name="input1" label="state/province" ></lightning-input>
+        <lightning-input type="text" name="input1" label="city" ></lightning-input>
+        <lightning-input type="date" name="input2" label="Date" value="2020-09-07"></lightning-input>
+    </div>
+
+    <lightning-record-edit-form object-api-name='Candidate__c' onsuccess={handleSuccess}>
+        <lightning-button variant="brand" type="submit" name="save" label="Create NEW Candidate">
+        </lightning-button>
+    </lightning-record-edit-form>
+
+    </lightning-card>
+</template>
