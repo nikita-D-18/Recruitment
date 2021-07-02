@@ -1,0 +1,17 @@
+.c-container {
+    border: 1px solid #163f8b;
+    margin: 10px 0 20px 0;
+}
+.header-column {
+    padding: 0 2rem;
+}
+.field-title {
+    font-size: .75rem;
+    line-height: 1.25;
+    color: #163f8b;
+    margin-bottom: .25rem;
+}
+.myColor{
+    background-color: rgb(7, 184, 16);
+    
+    }

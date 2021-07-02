@@ -3,12 +3,23 @@ import { NavigationMixin } from 'lightning/navigation';
 export default class NavigationExampleLWC extends NavigationMixin(LightningElement) {
     @api recordId;
     // Navigate to New Account Page
-    navigateToNewAccountPage() {
+    navigateToNewHomePage()
+    {
+       this[NavigationMixin.Navigate]({
+           type: 'standard__objectPage',
+           attributes: {
+               objectApiName: 'Home__c',
+               actionName: 'edit'
+           },
+       });
+   }
+    navigateToNewAccountPage()
+     {
         this[NavigationMixin.Navigate]({
             type: 'standard__objectPage',
             attributes: {
                 objectApiName: 'Position__c',
-                actionName: 'new'
+                actionName: 'list'
             },
         });
     }
@@ -26,6 +37,7 @@ export default class NavigationExampleLWC extends NavigationMixin(LightningEleme
             },
         });
     }
+    
     navigateToViewCandidatePage() {
 
         this[NavigationMixin.Navigate]({
@@ -177,4 +189,13 @@ export default class NavigationExampleLWC extends NavigationMixin(LightningEleme
             },
         });
     }
+    navigateToViewcontactPage(){
+        this[NavigationMixin.Navigate]({
+            type: 'standard__navItemPage',
+            attributes: {
+                apiName: this.contact,
+            },
+        });
+    }
+      
 }

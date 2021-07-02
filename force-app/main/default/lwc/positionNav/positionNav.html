@@ -1,15 +1,29 @@
+
 <template>
+    <div class="myCColor"> 
+        <div class="slds-align_absolute-center">
+        <lightning-button variant="" label="RECRUITMENT APP"  
+        class="slds-var-m-around_medium"></lightning-button>
+    </div>
     <lightning-card>
-        <lightning-card>
-            <lightning-button label="HOME" onclick={navigateToNewAccountPage}></lightning-button>
-            <lightning-button label="POSITION" onclick={navigateToViewAccountPage}></lightning-button>
-            <lightning-button label="CANDIDATE" onclick={navigateToViewCandidatePage}></lightning-button>
-            <lightning-button label="JOB APPLICATION" onclick={navigateToViewJobPage}></lightning-button>
+            <lightning-card>
+                
+            <img src="https://skillminds-dev-ed--c.documentforce.com/servlet/servlet.ImageServer?id=0155g000000lUj7&oid=00D5g000004QBGw&lastMod=1625044923000" style="height:100px;">            <lightning-button variant="success" label="HOME" 
+            class="slds-var-m-around_medium"
+            onclick={navigateToNewHomePage}></lightning-button>
+
+            <lightning-button variant="success" label="POSITION"
+            class="slds-var-m-around_medium"
+            onclick={navigateToViewAccountPage}></lightning-button>
+
+            <lightning-button variant="success" label="CANDIDATE" 
+            class="slds-var-m-around_medium"
+            onclick={navigateToViewCandidatePage}></lightning-button>
             
-        </lightning-card>
-        <lightning-card title="Navigate To Views">
-            <lightning-button label="Account Recent list View" onclick={navigateToAccountListView}></lightning-button>
-            <lightning-button label="Account Related List" onclick={navigateToContactRelatedList}></lightning-button>
-        </lightning-card>
+            <lightning-button variant="success" label="JOB APPLICATION"
+            class="slds-var-m-around_medium" 
+             onclick={navigateToViewJobPage}></lightning-button>
+            </lightning-card>
     </lightning-card>
+</div>
 </template>

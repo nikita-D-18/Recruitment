@@ -1,14 +1,12 @@
-  
 import { LightningElement } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
 
-export default class NavToNewRecord extends NavigationMixin(LightningElement) {
-    navigateToNewContact() {
+export default class NavToHelloTab extends NavigationMixin(LightningElement) {
+    navigateToHelloTab() {
         this[NavigationMixin.Navigate]({
-            type: 'standard__objectPage',
+            type: 'standard__navItemPage',
             attributes: {
-                objectApiName: 'Contact',
-                actionName: 'new'
+                apiName: 'Hello'
             }
         });
     }
